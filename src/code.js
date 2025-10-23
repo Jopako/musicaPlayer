@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const author = document.getElementById("author");
   const image = document.getElementById("image");
 
+
   function loadSong (index)
 
   {
@@ -75,6 +76,8 @@ stopStart.addEventListener('click', () => {
     audio.play();
   });
 
-
 });
+
+
+
 
