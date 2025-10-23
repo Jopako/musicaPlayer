@@ -33,3 +33,16 @@ musicaPlayer/
 ├── package-lock.json    # Versões exatas das dependências instaladas
 └── README.md            # Documentação do projeto 
 ```
+------------------------------------------------
+
+####⚙️ E como roda isso?
+
+```bash
+npm install
+npx electron .
+```
+------------------------------------------------
+
+#####👨‍💻 Autor
+
+João Paulo Kowalski
