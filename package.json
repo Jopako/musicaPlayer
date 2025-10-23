@@ -1,0 +1,13 @@
+{
+  "name": "meu-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^32.0.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electronmon": "^2.0.3"
+  }
+}

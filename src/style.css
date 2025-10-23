@@ -1,0 +1,73 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;  
+}
+
+.main
+{
+    background-color: rgb(28, 1, 36);
+    border-radius: 10px;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#titulo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#controls
+{
+    padding: 2em;
+    
+}
+
+#icones
+{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(28, 1, 36);
+
+}
+button
+{
+    background-color: rgb(28, 1, 36);
+}
+
+h1
+{
+    font-family: "Bitcount Prop Double Ink", system-ui;
+    text-align: center;
+    font-size: 4em;
+    margin: 0;
+
+}
+p
+{   
+    font-family: "Bitcount Prop Double Ink", system-ui;
+    font-size: 2em;
+    color: rgb(131, 73, 224);
+    font-weight: bold;
+    display: inline-block;
+}
+
+img
+{
+height: 25em;
+width: 25em;
+border-radius: 20px;
+padding: 1em;
+}

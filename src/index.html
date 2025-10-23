@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="main">
+    <div id="titulo">
+      <h1 id="title"></h1>
+      <div id="by">
+      <p>By:</p>
+      <p id="author"></p>
+      </div>
+    </div>
+
+    <div id="foto">
+      <img id="image" src="" alt="Capa da música" width="250">
+    </div>
+
+    <div id="musica-player">
+      <audio id="audio" src="" type="audio/mpeg"></audio>
+
+      <div id="controls">
+        <button id="prev">
+           <img id="icones" src="Sprites/Polygon 3.png" alt="Rewind">
+
+        </button>
+        <button id="stopStart">
+          <img id="icones" src="Sprites/Vector.png" alt="Play/Pause">
+        </button>
+        <button id="restart">
+                    <img id="icones" src="Sprites/ChatGPT Image 22 de out. de 2025, 22_05_38.png" alt="Play/Pause">
+
+        </button>
+        <button id="next">
+
+        <img id="icones" src="Sprites/Polygon 1.png" alt="Forward">
+
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./code.js"></script>
+</body>
+</html>
