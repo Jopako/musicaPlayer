@@ -35,7 +35,7 @@ musicaPlayer/
 ```
 ------------------------------------------------
 
-####⚙️ E como roda isso?
+#### ⚙️ E como roda isso?
 
 ```bash
 npm install
@@ -43,6 +43,6 @@ npx electron .
 ```
 ------------------------------------------------
 
-#####👨‍💻 Autor
+##### 👨‍💻 Autor
 
 João Paulo Kowalski
