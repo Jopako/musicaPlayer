@@ -31,5 +31,5 @@ musicaPlayer/
 ├── main.js              # Processo principal do Electron
 ├── package.json         # Configurações do Node/Electron e dependências
 ├── package-lock.json    # Versões exatas das dependências instaladas
-└── README.md            # Documentação do projeto
-´´´
+└── README.md            # Documentação do projeto 
+```
