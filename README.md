@@ -1,4 +1,4 @@
-# 🎵 SpotiBy
+# SpotiBy
 
 Um player totalmente caseiro e simples, feito com **Electron**, **HTML**, **CSS** e **JavaScript**. 
 
@@ -10,9 +10,9 @@ Então, por que não baixar as músicas em MP3, pegar as capas e passar tudo pro
 
 ##  Funcionalidades
 
-- 🎧 Reproduz músicas locais(Só as suas favoritas!)
-- ⏯️ Controles de play/pause, avançar e voltar  
-- 📀 Interface customizada e estilizada  
+- Reproduz músicas locais(Só as suas favoritas!)
+- Controles de play/pause, avançar e voltar  
+- Interface customizada e estilizada  
 
 ------------------------------------------------
 
