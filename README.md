@@ -17,6 +17,7 @@ Então, por que não baixar as músicas em MP3, pegar as capas e passar tudo pro
 ------------------------------------------------
 
 ## 🧩 Estrutura do Projeto
+
 musicaPlayer/
 ├── src/                 # Arquivos da interface e recursos do player
 │   ├── Assets/          # Ícones e imagens do app
