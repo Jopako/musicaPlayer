@@ -17,4 +17,27 @@ Então, por que não baixar as músicas em MP3, pegar as capas e passar tudo pro
 ------------------------------------------------
 
 ## 🧩 Estrutura do Projeto
+musicaPlayer/
+├── src/                 # Arquivos da interface e recursos do player
+│   ├── Assets/          # Ícones e imagens do app
+│   │   ├── SpotBy.png
+│   │   ├── Polygon 1.png
+│   │   ├── Polygon 3.png
+│   │   └── Vector.png
+│   ├── Music/           # Arquivos de áudio em MP3
+│   │   ├── diddy.mp3
+│   │   ├── Tiramisu.mp3
+│   │   └── BLEEDING.mp3
+│   ├── Photo/           # Capas das músicas
+│   │   ├── pdidy.jpg
+│   │   ├── giveon.jpg
+│   │   └── donT.jpeg
+│   ├── code.js          # Lógica do player
+│   ├── index.html       # Interface principal
+│   └── style.css        # Estilo do player
+├── .gitignore          
+├── main.js              # Processo principal do Electron
+├── package.json         # Configurações do Node/Electron
+├── package-lock.json    # Dependências exatas instaladas
+└── README.md            
 
