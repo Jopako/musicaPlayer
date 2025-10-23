@@ -1,20 +1,18 @@
 # 🎵 SpotiBy
 
-Um player de música minimalista feito com **Electron**, **HTML**, **CSS** e **JavaScript**.
+Um player totalmente caseiro e simples, feito com **Electron**, **HTML**, **CSS** e **JavaScript**.
 
-![preview](./Assets/SpotBy.png)
+Quem nunca quis reinventar a roda? Acordei motivado e decidi fazer meu próprio App para ouvir músicas. Com toda certeza não é comparável com grandes nomes da industria, no entanto foi feito com carinho, para me distrair e sair da monotomia. 
 
----
+------------------------------------------------
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
 - 🎧 Reproduz músicas locais  
 - ⏯️ Controles de play/pause, avançar e voltar  
 - 📀 Interface customizada e estilizada  
-- 🪟 Janela sem borda, com botões personalizados  
-- 💜 Ícone e nome do app personalizados  
 
----
+------------------------------------------------
 
 ## 🧩 Estrutura do Projeto
 
