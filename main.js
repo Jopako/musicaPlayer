@@ -1,6 +1,22 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
+/*const Database = require('better-sqlite3')
+
+const db = new Database(path.join(dirname__,'../data/musicas.db'))
+
+db.prepare
+(`
+CREATE TABLE IF NOT EXISTS musicas 
+(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+nome TEXT,
+artista TEXT,
+capa TEXT,
+arquivo TEXT
+)
+`).run();*/
+
 app.setName("SpotiBy");
 app.setDesktopName("SpotiBy");
 app.setAppUserModelId("com.spotiby.app"); 

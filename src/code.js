@@ -64,10 +64,23 @@ stopStart.addEventListener('click', () => {
   next.addEventListener('click', () =>
   {
     currentIndex++;
-    if (currentIndex >= songs.lenght) currentIndex = 0;
+    if (currentIndex >= songs.lenght) 
+  
+    currentIndex = 0;
     loadSong(currentIndex);
     audio.play();
+
   });
+
+  next.addEventListener('click', () => /* next com retorno para o primeiro index  */
+  {
+    if(currentIndex >= songs.length)
+    {
+      currentIndex = 0;
+     loadSong(currentIndex);
+    audio.play();
+    } 
+  })
  
   prev.addEventListener('click',() => 
   {
