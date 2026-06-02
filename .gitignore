@@ -12,6 +12,7 @@ out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
 .DS_Store
 Thumbs.db
@@ -20,3 +21,16 @@ Thumbs.db
 
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+.env
+.env.local
+.env.*.local
+
+*.pem
+*.key
+
+package-lock.json
+yarn.lock

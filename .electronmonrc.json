@@ -1,0 +1,7 @@
+{
+  "env": "development",
+  "mainFile": "main.js",
+  "out": "dist",
+  "build": [],
+  "ignore": ["node_modules", "dist", "builds"]
+}
