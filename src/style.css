@@ -127,7 +127,7 @@ p {
 #duration-slider {
   flex: 1;
   height: 6px;
-  border-radius: 5px;
+  border-radius: 14px;
   background: rgba(184, 131, 255, 0.3);
   outline: none;
   -webkit-appearance: none;
@@ -138,35 +138,51 @@ p {
 #duration-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #5b00a5, #bf36e8);
+  background-color: transparent;
+  background-image: url("Assets/BALL.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(191, 54, 232, 0.8);
-  transition: box-shadow 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  border: 2px solid transparent;
+  box-shadow: none;
 }
 
-#duration-slider::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 15px rgba(191, 54, 232, 1);
+#duration-slider:hover::-webkit-slider-thumb {
+  border-color: rgba(191, 54, 232, 0.9);
+  box-shadow: 0 0 0 4px rgba(191, 54, 232, 0.15);
 }
 
 #duration-slider::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #5b00a5, #bf36e8);
+  background-color: transparent;
+  background-image: url("Assets/BALL.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   cursor: pointer;
-  border: none;
-  box-shadow: 0 0 8px rgba(191, 54, 232, 0.8);
-  transition: box-shadow 0.2s ease;
+  border: 2px solid transparent;
+  box-shadow: none;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
-#duration-slider::-moz-range-thumb:hover {
-  box-shadow: 0 0 15px rgba(191, 54, 232, 1);
+#duration-slider:hover::-moz-range-thumb {
+  border-color: rgba(191, 54, 232, 0.9);
+  box-shadow: 0 0 0 4px rgba(191, 54, 232, 0.15);
 }
 
 .main:hover {
   box-shadow: 0 0 50px rgba(191, 54, 232, 0.4);
   transform: translateY(-4px);
 }
+

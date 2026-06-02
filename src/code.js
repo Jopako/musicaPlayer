@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
       audio: "Music/Tiramisu.mp3",
       image: "Photo/donT.jpeg",
     },
-    {
-      title: "Teste",
-      author: "Teste",
-      audio: "Music/teste.mp3",
-    },
+    // {
+    //   title: "Teste",
+    //   author: "Teste",
+    //   audio: "Music/teste.mp3",
+    // },
     {
       title: "Crew",
-      author: "Brent Fayaz",
+      author: "GoldLink",
       audio: "Music/crew.mp3",
       image: "Photo/crew.jpeg",
     },
