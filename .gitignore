@@ -4,9 +4,13 @@ Photo/
 Sprites/
 Assets/
 builds/
+build/
+data/
 
 dist/
 out/
+electron-builder-cache/
+.cache/
 
 *.log
 npm-debug.log*

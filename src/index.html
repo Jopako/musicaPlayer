@@ -3,27 +3,148 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Music Player</title>
+    <title>Sompur</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inconsolata:wght@200..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="main">
-      <div id="titulo">
-        <h1 id="title"></h1>
-        <div id="by">
-          <p>By:</p>
-          <p id="author"></p>
+    <!-- ── Drawer lateral ──────────────────────────────────────── -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer" id="drawer">
+      <div class="drawer-header">
+        <span class="drawer-title">Sompur</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Fechar menu">
+          ✕
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <button class="drawer-item" id="btnAbrirModal">
+          <span class="drawer-icon">＋</span>
+          Adicionar música
+        </button>
+        <button class="drawer-item" id="btnVerBiblioteca">
+          <span class="drawer-icon">♪</span>
+          Biblioteca
+        </button>
+        <button class="drawer-item" id="btnDesabilitarMov">
+          <span class="drawer-icon">⚙</span>
+          Desabilitar Movimentação
+        </button>
+      </nav>
+    </div>
+
+    <!-- ── Modal adicionar música ───────────────────────────────── -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <span class="modal-title">Adicionar música</span>
+          <button class="modal-close" id="modalClose" aria-label="Fechar">
+            ✕
+          </button>
+        </div>
+
+        <!-- Área de importação -->
+        <div class="import-area" id="importArea">
+          <div class="import-icon" id="importIcon">↑</div>
+          <p id="importText">Clique para selecionar um MP3</p>
+          <small id="importSub">ou arraste e solte aqui</small>
+        </div>
+
+        <!-- Badge lendo metadados -->
+        <div class="badge-reading" id="badgeReading" style="display: none">
+          ⟳ Lendo metadados…
+        </div>
+        <!-- Badge preenchido automaticamente -->
+        <div class="badge-auto" id="badgeAuto" style="display: none">
+          ✓ Campos preenchidos pelas tags ID3
+        </div>
+
+        <!-- Capa -->
+        <div class="cover-row">
+          <div class="cover-thumb" id="coverThumb">
+            <span id="coverPlaceholder">♪</span>
+            <img id="coverPreview" src="" alt="Capa" style="display: none" />
+          </div>
+          <div class="cover-info">
+            <p id="coverLabel">Nenhuma capa</p>
+            <small id="coverSub"
+              >Extraída do MP3 ou importada manualmente</small
+            >
+          </div>
+          <button class="btn-ghost" id="btnTrocarCapa">Trocar</button>
+        </div>
+
+        <!-- Campos -->
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Título</label>
+            <input type="text" id="fieldTitulo" placeholder="Nome da música" />
+          </div>
+          <div class="form-group">
+            <label>Artista</label>
+            <input type="text" id="fieldAutor" placeholder="Nome do artista" />
+          </div>
+          <div class="form-group">
+            <label>Álbum</label>
+            <input type="text" id="fieldAlbum" placeholder="Álbum" />
+          </div>
+          <div class="form-group half">
+            <label>Ano</label>
+            <input type="text" id="fieldAno" placeholder="2024" maxlength="4" />
+          </div>
+          <div class="form-group">
+            <label>Gênero</label>
+            <input type="text" id="fieldGenero" placeholder="Rock, Pop…" />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-ghost" id="btnCancelar">Cancelar</button>
+          <button class="btn-primary" id="btnSalvar" disabled>
+            Salvar música
+          </button>
         </div>
       </div>
+    </div>
 
-      <div id="foto">
-        <img id="image" src="" alt="Capa da música" width="250" />
+    <!-- ── Modal biblioteca ─────────────────────────────────────── -->
+    <div class="modal-overlay" id="modalBiblioteca">
+      <div class="modal modal-larga" id="modalBibContent">
+        <div class="modal-header">
+          <span class="modal-title">Biblioteca</span>
+          <button class="modal-close" id="bibClose" aria-label="Fechar">
+            ✕
+          </button>
+        </div>
+        <div id="listaMusicas" class="lista-musicas">
+          <p class="empty-state">Nenhuma música adicionada ainda.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Player principal ─────────────────────────────────────── -->
+    <div class="main">
+      <button class="hamburger" id="menuBtn" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="cover-wrapper">
+        <img id="image" src="" alt="Capa da música" />
+        <div class="cover-overlay"></div>
+        <div class="cover-info">
+          <h1 id="title"></h1>
+          <div id="by">
+            <p>By:</p>
+            <p id="author"></p>
+          </div>
+        </div>
       </div>
 
       <div id="musica-player">
@@ -32,7 +153,6 @@
         <div class="slider">
           <div class="time-controls">
             <span id="current-time">0:00</span>
-
             <input
               type="range"
               id="duration-slider"
@@ -40,24 +160,34 @@
               max="100"
               value="0"
             />
-
             <span id="total-duration">0:00</span>
           </div>
         </div>
 
         <div id="controls">
-          <button id="prev">
-            <img id="icones" src="Assets/playLeft.aseprite.png" alt="Rewind" />
+          <button id="prev" aria-label="Anterior">
+            <img src="Assets/playLeft.aseprite.png" alt="Anterior" />
           </button>
-          <button id="stopStart">
+          <button id="stopStart" class="btn-main" aria-label="Play/Pause">
             <img id="pause" alt="Play/Pause" />
           </button>
-          <button id="restart">
-            <img id="icones" src="Assets/replay.png" alt="Play/Pause" />
+          <button id="restart" class="btn-main" aria-label="Reiniciar">
+            <img src="Assets/replay.png" alt="Reiniciar" />
           </button>
-          <button id="next">
-            <img id="icones" src="Assets/play.aseprite.png" alt="Forward" />
+          <button id="next" aria-label="Próxima">
+            <img src="Assets/play.aseprite.png" alt="Próxima" />
           </button>
+        </div>
+
+        <div class="volume-controls">
+          <img src="Assets/som.png" alt="Volume" />
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="100"
+            value="100"
+          />
         </div>
       </div>
     </div>

@@ -1,121 +1,139 @@
-# SpotiBy 
+# Sompur
 
-Um player de músicas minimalista e elegante feito com **Electron**, **HTML**, **CSS** e **JavaScript**.
+Um player de músicas minimalista e elegante desenvolvido com Electron, combinando performance desktop com uma interface interativa.
 
-Projeto pessoal criado para explorar o desenvolvimento de desktop com Electron e desfrutar das suas próprias músicas com uma interface customizada.
+## Visão Geral
 
----
+Sompur é um aplicativo desktop para reprodução de arquivos MP3 com foco em experiência do usuário. Construído com tecnologias web modernas encapsuladas no Electron, oferece uma forma elegante de gerenciar e ouvir sua coleção musical pessoal com interface customizada e efeitos visuais interativos.
 
-## Funcionalidades
+## Como Foi Desenvolvido
 
-- Reprodução de arquivos MP3 locais
-- **Próxima/Anterior** com navegação cíclica pela playlist
-- **Slider de progresso** — arraste para pular para qualquer ponto
-- **Relógio de tempo** — mostra tempo atual e duração (MM:SS)
-- **Reinicio da música** — volta ao início
-- **Autoplay** — toca a próxima música automaticamente ao final
+O projeto foi arquitetado com separação clara entre:
 
----
+- **Frontend:** HTML5, CSS3 e JavaScript vanilla — sem dependências externas
+- **Backend:** Node.js com Electron — gerenciando janelas, I/O e integração com o SO
+- **Persistência:** SQLite com biblioteca `better-sqlite3` para armazenar metadados de músicas
+- **Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
+
+O desenvolvimento foi iterativo, começando com um player básico e evoluindo para um aplicativo completo com gerenciamento de biblioteca e efeitos interativos.
+
+## Funcionalidades Atuais
+
+### Reprodução de Áudio
+
+- Reprodução de arquivos MP3 locais com controles básicos
+- Botão play/pause com ícone dinâmico
+- Navegação com próxima/anterior (com loop cíclico)
+- Reinício da música
+- Autoplay — passa para próxima música automaticamente ao final
+
+### Gerenciamento de Biblioteca
+
+- Importar músicas MP3 com extração automática de metadados (título, artista, álbum, ano, gênero)
+- Banco de dados SQLite para persistência de informações
+- Visualizar biblioteca completa de músicas importadas
+- Importar/alterar capas de álbum
+- Edição manual de metadados antes de salvar
+- Exclusão de músicas da biblioteca
+
+### Controles e Interface
+
+- Slider de progresso — clique ou arraste para pular para qualquer ponto da música
+- Mostrador de tempo em formato MM:SS (tempo atual / duração total)
+- Controle de volume com slider
+- Menu lateral (drawer) com acesso a todas as funcionalidades
+- Efeito de movimentação 3D no card principal (hover effect com perspectiva)
+- Opção para ativar/desativar o efeito de movimentação conforme preferência do usuário
+
+### Armazenamento de Dados
+
+- Banco de dados SQLite criado automaticamente em `~/.config/meu-app/sompur.db`
+- Todas as músicas, capas e metadados são persistidos localmente
+- Fallback com playlist padrão em caso de DB vazio
+
+## Tecnologias Utilizadas
+
+| Tecnologia                   | Propósito                                                |
+| ---------------------------- | -------------------------------------------------------- |
+| **Electron**                 | Framework para criar aplicativos desktop multiplataforma |
+| **Node.js**                  | Runtime JavaScript no servidor                           |
+| **SQLite3** (better-sqlite3) | Banco de dados leve e embutido                           |
+| **music-metadata**           | Extração de tags ID3 de arquivos MP3                     |
+| **electron-builder**         | Build e packaging para distribuição                      |
+| **electron-reload**          | Hot reload automático em desenvolvimento                 |
+| **HTML5**                    | Estrutura da interface                                   |
+| **CSS3**                     | Estilização com transformações 3D                        |
+| **JavaScript Vanilla**       | Lógica sem frameworks externos                           |
 
 ## Estrutura do Projeto
 
 ```
 musicaPlayer/
 ├── src/
-│   ├── Assets/           # Ícones e imagens (botões, logo, etc.)
-│   ├── Music/            # Arquivos MP3 das músicas
-│   ├── Photo/            # Capas das músicas
+│   ├── Assets/           # Ícones e recursos visuais
+│   ├── Music/            # Músicas padrão (fallback)
+│   ├── Photo/            # Capas padrão (fallback)
 │   ├── code.js           # Lógica completa do player
-│   ├── index.html        # Interface HTML
-│   └── style.css         # Estilos CSS
-├── main.js               # Entrada principal do Electron
+│   ├── index.html        # Estrutura HTML
+│   └── style.css         # Estilos e animações
+├── main.js               # Processo principal do Electron
 ├── package.json          # Dependências e scripts
 ├── .gitignore            # Arquivos ignorados no Git
-├── .electronmonrc.json   # Config do hot reload
+├── .electronmonrc.json   # Configuração de hot reload
 └── README.md             # Este arquivo
 ```
 
----
+## Como Usar
 
-## Como Rodar
+### Instalação e Execução
 
-### Pré-requisitos
-
-- **Node.js** (v14+) e **npm** instalados
-
-### Instalação
-
-1. Clone ou baixe o repositório:
-
-```bash
-git clone <seu-repo>
-cd musicaPlayer
-```
-
-2. Instale as dependências:
+1. Instale as dependências:
 
 ```bash
 npm install
 ```
 
-3. Execute em modo desenvolvimento (com hot reload):
+2. Execute em modo desenvolvimento:
 
 ```bash
 npm start
 ```
 
-A janela do app abrirá automaticamente. 
-
-### Build para Distribuição
-
-Para criar um executável:
+3. Para build de distribuição:
 
 ```bash
 npm run dist
 ```
 
-O arquivo será gerado em `dist/`.
+### Adicionando Músicas
 
----
+Existem duas formas:
 
-## Como Adicionar Músicas
+**Opção 1: Importar via Interface**
 
-1. Coloque seus arquivos **MP3** na pasta `src/Music/`
-2. Coloque as capas (JPG/PNG) na pasta `src/Photo/`
-3. Edite `src/code.js` e adicione a música no array `songs`:
+1. Clique no menu (hambúrguer) no topo
+2. Selecione "Adicionar música"
+3. Escolha um arquivo MP3
+4. Os metadados serão extraídos automaticamente
+5. Edite se necessário e salve
 
-```javascript
-{
-  title: "Nome da Música",
-  author: "Artista",
-  audio: "Music/arquivo.mp3",
-  image: "Photo/capa.jpg",
-}
-```
+**Opção 2: Fallback Local**
+Coloque arquivos MP3 em `src/Music/` e capas em `src/Photo/`, então edite `src/code.js` para adicionar à playlist inicial.
 
-4. Salve e veja a mudança em tempo real!
 
----
+## Considerações de Produção
 
-## Tecnologias Utilizadas
+- Banco de dados é criado no diretório de dados do usuário (`app.getPath("userData")`)
+- Completamente funcional quando empacotado e distribuído
+- Compatível com Windows, macOS e Linux
+- Sem dependências externas no runtime (melhor performance)
 
-- **Electron** — Framework para apps desktop
-- **HTML5 & CSS3** — Interface e estilos
-- **JavaScript Vanilla** — Lógica sem dependências
-- **electron-reload** — Hot reload automático
-- **electron-builder** — Build e packaging
+## Próximos Passos Potenciais
 
----
+- Desenvolver interface para usuários novos
+- Mascote para interface / Aseprite made
+- Dowloader de mp3 embutido
 
-## Notas
-
-- O player faz loop automático ao final da playlist
-- Use o slider para pular entre partes da música
-- Todos os tempos são exibidos em formato `MM:SS`
-- A interface é otimizada para uma resolução específica (490x760px)
-
----
-
-## 👨‍💻 Autor
+## Autor
 
 João Paulo Kowalski
