@@ -11,6 +11,7 @@ function initDB() {
   const dataDir = path.dirname(DB_PATH);
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
+     console.log(app.getPath("userData"))
   }
 
   db = new Database(DB_PATH);
@@ -92,6 +93,18 @@ ipcMain.handle("importar-capa", async () => {
 });
 
 ipcMain.handle("salvar-musica", (_, dados) => {
+  const musicasDir = path.join(app.getPath("userData"), "musicas");
+  if (!fs.existsSync(musicasDir)) {
+    fs.mkdirSync(musicasDir, { recursive: true });
+  }
+
+  const nomeArquivo = path.basename(dados.caminho);
+  const caminhoDestino = path.join(musicasDir, nomeArquivo);
+
+  if (!fs.existsSync(caminhoDestino)) {
+    fs.copyFileSync(dados.caminho, caminhoDestino);
+  }
+
   let capaBlob = null;
   if (dados.capaBase64) {
     const base64Data = dados.capaBase64.split(",")[1];
@@ -108,12 +121,11 @@ ipcMain.handle("salvar-musica", (_, dados) => {
     dados.album,
     dados.ano,
     dados.genero,
-    dados.caminho,
+    caminhoDestino, 
     capaBlob,
   );
-  return { id: info.lastInsertRowid };
+  return { id: info.lastInsertRowid, caminho: caminhoDestino};
 });
-
 ipcMain.handle("listar-musicas", () => {
   const rows = db.prepare("SELECT * FROM musicas ORDER BY id DESC").all();
 
@@ -127,6 +139,26 @@ ipcMain.handle("listar-musicas", () => {
 
 ipcMain.handle("deletar-musica", (_, id) => {
   db.prepare("DELETE FROM musicas WHERE id = ?").run(id);
+  return true;
+});
+
+ipcMain.handle("atualizar-musica", (_, dados) => {
+  if (!db) return false;
+
+  if (dados.capaBase64) {
+    const base64Data = dados.capaBase64.split(",")[1];
+    const capaBlob = Buffer.from(base64Data, "base64");
+    db.prepare(`
+      UPDATE musicas SET titulo=?, autor=?, album=?, ano=?, genero=?, capa=?
+      WHERE id=?
+    `).run(dados.titulo, dados.autor, dados.album, dados.ano, dados.genero, capaBlob, Number(dados.id));
+  } else {
+    db.prepare(`
+      UPDATE musicas SET titulo=?, autor=?, album=?, ano=?, genero=?
+      WHERE id=?
+    `).run(dados.titulo, dados.autor, dados.album, dados.ano, dados.genero, Number(dados.id));
+  }
+
   return true;
 });
 
@@ -156,6 +188,7 @@ function createWindow() {
 
 app.whenReady().then(() => {
   initDB();
+   console.log(app.getPath("userData"))
   createWindow();
 });
 

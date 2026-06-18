@@ -13,7 +13,6 @@
     />
   </head>
   <body>
-    <!-- ── Drawer lateral ──────────────────────────────────────── -->
     <div class="drawer-overlay" id="drawerOverlay"></div>
     <div class="drawer" id="drawer">
       <div class="drawer-header">
@@ -38,7 +37,6 @@
       </nav>
     </div>
 
-    <!-- ── Modal adicionar música ───────────────────────────────── -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal" id="modal">
         <div class="modal-header">
@@ -48,23 +46,19 @@
           </button>
         </div>
 
-        <!-- Área de importação -->
         <div class="import-area" id="importArea">
           <div class="import-icon" id="importIcon">↑</div>
           <p id="importText">Clique para selecionar um MP3</p>
           <small id="importSub">ou arraste e solte aqui</small>
         </div>
 
-        <!-- Badge lendo metadados -->
         <div class="badge-reading" id="badgeReading" style="display: none">
           ⟳ Lendo metadados…
         </div>
-        <!-- Badge preenchido automaticamente -->
         <div class="badge-auto" id="badgeAuto" style="display: none">
           ✓ Campos preenchidos pelas tags ID3
         </div>
 
-        <!-- Capa -->
         <div class="cover-row">
           <div class="cover-thumb" id="coverThumb">
             <span id="coverPlaceholder">♪</span>
@@ -79,7 +73,6 @@
           <button class="btn-ghost" id="btnTrocarCapa">Trocar</button>
         </div>
 
-        <!-- Campos -->
         <div class="form-grid">
           <div class="form-group full">
             <label>Título</label>
@@ -112,7 +105,6 @@
       </div>
     </div>
 
-    <!-- ── Modal biblioteca ─────────────────────────────────────── -->
     <div class="modal-overlay" id="modalBiblioteca">
       <div class="modal modal-larga" id="modalBibContent">
         <div class="modal-header">
@@ -127,7 +119,55 @@
       </div>
     </div>
 
-    <!-- ── Player principal ─────────────────────────────────────── -->
+    <div class="modal-overlay" id="modalEditar">
+      <div class="modal" id="modalEditarContent">
+        <div class="modal-header">
+          <span class="modal-title">✏ Editar música</span>
+          <button class="modal-close" id="editarClose" aria-label="Fechar">✕</button>
+        </div>
+
+        <div class="cover-row">
+          <div class="cover-thumb">
+            <span id="editarCoverPlaceholder">♪</span>
+            <img id="editarCoverPreview" src="" alt="Capa" style="display:none" />
+          </div>
+          <div class="cover-info">
+            <p id="editarCoverLabel">Capa atual</p>
+            <small>Clique em trocar para alterar</small>
+          </div>
+          <button class="btn-ghost" id="editarBtnTrocarCapa">Trocar</button>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Título</label>
+            <input type="text" id="editarTitulo" placeholder="Nome da música" />
+          </div>
+          <div class="form-group">
+            <label>Artista</label>
+            <input type="text" id="editarAutor" placeholder="Nome do artista" />
+          </div>
+          <div class="form-group">
+            <label>Álbum</label>
+            <input type="text" id="editarAlbum" placeholder="Álbum" />
+          </div>
+          <div class="form-group half">
+            <label>Ano</label>
+            <input type="text" id="editarAno" placeholder="2024" maxlength="4" />
+          </div>
+          <div class="form-group">
+            <label>Gênero</label>
+            <input type="text" id="editarGenero" placeholder="Rock, Pop…" />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn-ghost" id="editarCancelar">Cancelar</button>
+          <button class="btn-primary" id="editarSalvar">Salvar alterações</button>
+        </div>
+      </div>
+    </div>
+
     <div class="main">
       <button class="hamburger" id="menuBtn" aria-label="Abrir menu">
         <span></span>
