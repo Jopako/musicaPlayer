@@ -49,7 +49,6 @@ O desenvolvimento foi iterativo, começando com um player básico e evoluindo pa
 
 - Banco de dados SQLite criado automaticamente em `~/.config/meu-app/sompur.db`
 - Todas as músicas, capas e metadados são persistidos localmente
-- Fallback com playlist padrão em caso de DB vazio
 
 ## Tecnologias Utilizadas
 
@@ -68,19 +67,9 @@ O desenvolvimento foi iterativo, começando com um player básico e evoluindo pa
 ## Estrutura do Projeto
 
 ```
-musicaPlayer/
-├── src/
-│   ├── Assets/           # Ícones e recursos visuais
-│   ├── Music/            # Músicas padrão (fallback)
-│   ├── Photo/            # Capas padrão (fallback)
-│   ├── code.js           # Lógica completa do player
-│   ├── index.html        # Estrutura HTML
-│   └── style.css         # Estilos e animações
-├── main.js               # Processo principal do Electron
-├── package.json          # Dependências e scripts
-├── .gitignore            # Arquivos ignorados no Git
-├── .electronmonrc.json   # Configuração de hot reload
-└── README.md             # Este arquivo
+...
+working on it...
+
 ```
 
 ## Como Usar
@@ -107,9 +96,9 @@ npm run dist
 
 ### Adicionando Músicas
 
-Existem duas formas:
 
-**Opção 1: Importar via Interface**
+
+**Importar via Interface**
 
 1. Clique no menu (hambúrguer) no topo
 2. Selecione "Adicionar música"
@@ -117,22 +106,20 @@ Existem duas formas:
 4. Os metadados serão extraídos automaticamente
 5. Edite se necessário e salve
 
-**Opção 2: Fallback Local**
-Coloque arquivos MP3 em `src/Music/` e capas em `src/Photo/`, então edite `src/code.js` para adicionar à playlist inicial.
+
 
 
 ## Considerações de Produção
 
 - Banco de dados é criado no diretório de dados do usuário (`app.getPath("userData")`)
-- Completamente funcional quando empacotado e distribuído
 - Compatível com Windows, macOS e Linux
-- Sem dependências externas no runtime (melhor performance)
+- Sem dependências externas no runtime 
 
 ## Próximos Passos Potenciais
 
-- Desenvolver interface para usuários novos
-- Mascote para interface / Aseprite made
-- Dowloader de mp3 embutido
+- Dowloader de mp3 
+- créditos no drawer
+- fazer icones do drawe no aseprite
 
 ## Autor
 
