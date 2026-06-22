@@ -310,7 +310,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         const id = Number(btn.dataset.id);
         await ipcRenderer.invoke("deletar-musica", id);
 
-        // Remove da lista em memória
         const idxNaSongs = songs.findIndex((s) => s.id === id);
         if (idxNaSongs !== -1) {
           songs.splice(idxNaSongs, 1);
@@ -325,7 +324,6 @@ document.addEventListener("DOMContentLoaded", async function () {
           loadSong(currentIndex);
         }
 
-        // Remove visualmente da biblioteca
         btn.closest(".bib-item").remove();
         if (!listaMusicas.querySelector(".bib-item")) {
           listaMusicas.innerHTML = '<p class="empty-state">Nenhuma música adicionada ainda.</p>';

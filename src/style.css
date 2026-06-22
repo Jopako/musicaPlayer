@@ -763,3 +763,32 @@ p {
   border-radius: 6px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.logo-item
+{
+  background-color: transparent;
+  outline: none;
+  position: fixed;
+    bottom: 0;
+  left: 0;
+  padding: 10px;
+  cursor: pointer;
+  padding-left: 100px;
+  border: none;
+}
+
+#drawer-p
+{
+  position: fixed;
+    bottom: 55px;
+   display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #d1a0ff;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.95em;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
+}

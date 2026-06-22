@@ -119,6 +119,7 @@ npm run dist
 
 - Dowloader de mp3 
 - créditos no drawer
+- ajustar css do habilitar e desabilitar, quando ativada a função ele quebra o css
 - fazer icones do drawe no aseprite
 
 ## Autor
