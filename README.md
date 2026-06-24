@@ -9,6 +9,9 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 
 
 
+<img width="485" height="756" alt="image" src="https://github.com/user-attachments/assets/c6647776-0dd5-424e-ba28-06419097a577" />
+<img width="485" height="756" alt="image" src="https://github.com/user-attachments/assets/aecfd7d3-78c9-4021-a558-6baa7ec1c997" />
+
 
 
 ## Como Foi Desenvolvido
@@ -17,6 +20,8 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 - **Backend:** Node.js com Electron — gerenciando janelas, I/O e integração com o SO
 - **Persistência:** SQLite com biblioteca `better-sqlite3` para armazenar metadados de músicas
 - **Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
+
+
 
 
 ## Funcionalidades Atuais
@@ -51,6 +56,9 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 
 - Banco de dados SQLite criado automaticamente em `~/.config/meu-app/sompur.db`
 - Todas as músicas, capas e metadados são persistidos localmente
+
+
+
 
 ## Tecnologias Utilizadas
 
