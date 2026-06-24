@@ -9,8 +9,8 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 
 
 
-<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/c6647776-0dd5-424e-ba28-06419097a577" />
-<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/aecfd7d3-78c9-4021-a558-6baa7ec1c997" />
+<img width="380" height="500" alt="image" src="https://github.com/user-attachments/assets/c6647776-0dd5-424e-ba28-06419097a577" />
+<img width="380" height="500" alt="image" src="https://github.com/user-attachments/assets/aecfd7d3-78c9-4021-a558-6baa7ec1c997" />
 
 
 
