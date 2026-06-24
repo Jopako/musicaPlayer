@@ -1,10 +1,13 @@
-# Sompur
+<div align="center">
+  
+  ![Sompur](src/Assets/sompur.png)
 
-Um player de músicas minimalista e elegante desenvolvido com Electron, combinando performance desktop com uma interface interativa.
+</div>
+
 
 ## Visão Geral
 
-Sompur é um aplicativo desktop para reprodução de arquivos MP3 com foco em experiência do usuário. Construído com tecnologias web modernas encapsuladas no Electron, oferece uma forma elegante de gerenciar e ouvir sua coleção musical pessoal com interface customizada e efeitos visuais interativos.
+Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo.
 
 ## Como Foi Desenvolvido
 
@@ -64,13 +67,6 @@ O desenvolvimento foi iterativo, começando com um player básico e evoluindo pa
 | **CSS3**                     | Estilização com transformações 3D                        |
 | **JavaScript Vanilla**       | Lógica sem frameworks externos                           |
 
-## Estrutura do Projeto
-
-```
-...
-working on it...
-
-```
 
 ## Como Usar
 
