@@ -2,23 +2,22 @@
   
   ![Sompur](src/Assets/sompur.png)
 
+  
+Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo.
+
 </div>
 
 
-## Visão Geral
 
-Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo.
+
 
 ## Como Foi Desenvolvido
 
-O projeto foi arquitetado com separação clara entre:
-
-- **Frontend:** HTML5, CSS3 e JavaScript vanilla — sem dependências externas
+- **Frontend:** HTML5, CSS3 e JavaScript vanilla 
 - **Backend:** Node.js com Electron — gerenciando janelas, I/O e integração com o SO
 - **Persistência:** SQLite com biblioteca `better-sqlite3` para armazenar metadados de músicas
 - **Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
 
-O desenvolvimento foi iterativo, começando com um player básico e evoluindo para um aplicativo completo com gerenciamento de biblioteca e efeitos interativos.
 
 ## Funcionalidades Atuais
 
@@ -109,14 +108,13 @@ npm run dist
 
 - Banco de dados é criado no diretório de dados do usuário (`app.getPath("userData")`)
 - Compatível com Windows, macOS e Linux
-- Sem dependências externas no runtime 
 
 ## Próximos Passos Potenciais
 
 - Dowloader de mp3 
 - créditos no drawer
 - ajustar css do habilitar e desabilitar, quando ativada a função ele quebra o css
-- fazer icones do drawe no aseprite
+- fazer icones do drawer no aseprite
 
 ## Autor
 
