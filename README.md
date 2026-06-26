@@ -1,3 +1,4 @@
+
 <div align="center">
   
   ![Sompur](src/Assets/sompur.png)
@@ -107,13 +108,35 @@ npm run dist
 
 ## Próximos Passos Potenciais
 
-- Dowloader de mp3 
 - créditos no drawer
 - ajustar css do habilitar e desabilitar, quando ativada a função ele quebra o css
-- fazer icones do drawer no aseprite
+
+
+
+---
+
+# Sprites feitos no Aseprite <img width="32" height="32" alt="ase" src="https://github.com/user-attachments/assets/11fff839-b259-4f3b-8454-330237611ae2" />
+
+
+### Bola do Slider <img width="32" height="32" alt="ball" src="https://github.com/user-attachments/assets/2262c5ed-8934-4e44-99c0-e8b8fb8609d7" />
+### Pause <img width="32" height="32" alt="pause" src="https://github.com/user-attachments/assets/7c788e81-cbd8-4ece-8c0e-d58b7be73348" />
+### Volume <img width="32" height="32" alt="som" src="https://github.com/user-attachments/assets/0feccec3-0514-4711-91a9-e1d69a573d62" />
+### Replay <img width="32" height="32" alt="replay" src="https://github.com/user-attachments/assets/bc5d0cc4-0dda-4eac-8996-ba0291303d4c" />
+### Play <img width="32" height="32" alt="play" src="https://github.com/user-attachments/assets/016995da-11af-4ff8-89c3-8945394e11f3" />
+### Avançar  <img width="32" height="32" alt="play aseprite" src="https://github.com/user-attachments/assets/a2b4f22f-45eb-4a24-be88-19b227fb7662" />
+### Retroceder <img width="32" height="32" alt="playLeft aseprite" src="https://github.com/user-attachments/assets/77d61b48-3c9a-4f88-922b-065e3cb67b94" />
+
 
 ---
 
 ## Autor
 
-João Paulo Kowalski
+
+*João Paulo Kowalski*
+
+<div align="center">
+  <img width="42" height="42" alt="logo" src="https://github.com/user-attachments/assets/47756f78-1955-4056-bde4-bc6ed674a306" />
+
+</div>
+
+
