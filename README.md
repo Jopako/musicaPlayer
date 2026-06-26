@@ -3,7 +3,7 @@
   ![Sompur](src/Assets/sompur.png)
 
   
-Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo.
+<p> Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo. </p>
 
 </div>
 
@@ -14,17 +14,17 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 
 
 
-## Como Foi Desenvolvido
+  # Frontend:         [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
+  # Backend:          [![My Skills](https://skillicons.dev/icons?i=nodejs,electron)](https://skillicons.dev) 
+  # Banco de Dados:   [![My Skills](https://skillicons.dev/icons?i=sqlite)](https://skillicons.dev) 
 
-- **Frontend:** HTML5, CSS3 e JavaScript vanilla 
-- **Backend:** Node.js com Electron — gerenciando janelas, I/O e integração com o SO
-- **Persistência:** SQLite com biblioteca `better-sqlite3` para armazenar metadados de músicas
+  
 - **Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
 
 
 
 
-## Funcionalidades Atuais
+# Funcionalidades Atuais
 
 ### Reprodução de Áudio
 
@@ -56,24 +56,6 @@ Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua 
 
 - Banco de dados SQLite criado automaticamente em `~/.config/meu-app/sompur.db`
 - Todas as músicas, capas e metadados são persistidos localmente
-
-
-
-
-## Tecnologias Utilizadas
-
-| Tecnologia                   | Propósito                                                |
-| ---------------------------- | -------------------------------------------------------- |
-| **Electron**                 | Framework para criar aplicativos desktop multiplataforma |
-| **Node.js**                  | Runtime JavaScript no servidor                           |
-| **SQLite3** (better-sqlite3) | Banco de dados leve e embutido                           |
-| **music-metadata**           | Extração de tags ID3 de arquivos MP3                     |
-| **electron-builder**         | Build e packaging para distribuição                      |
-| **electron-reload**          | Hot reload automático em desenvolvimento                 |
-| **HTML5**                    | Estrutura da interface                                   |
-| **CSS3**                     | Estilização com transformações 3D                        |
-| **JavaScript Vanilla**       | Lógica sem frameworks externos                           |
-
 
 ## Como Usar
 
