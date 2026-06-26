@@ -2,7 +2,7 @@
   
   ![Sompur](src/Assets/sompur.png)
 
-  
+ 
 <p> Sompur é um aplicativo desktop para reprodução de arquivos MP3. Adicione sua música desejada como quiser, mude a capa, seu nome e autor. Fiz esse projeto justamente para ouvir as músicas que eu amo com a cara que eu gosto. Baixe manualmente o mp3 e a capa, os adicione ao Sompur, parece retrógrado? Sim, mas acaba que dou muito mais valor a música que escuto quando é feito esse processo de cuidado e ajustes. Espero que sinta o mesmo. </p>
 
 </div>
@@ -12,16 +12,16 @@
 <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/c6647776-0dd5-424e-ba28-06419097a577" />
 <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/aecfd7d3-78c9-4021-a558-6baa7ec1c997" />
 
-
+---
 
   # Frontend:         [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
   # Backend:          [![My Skills](https://skillicons.dev/icons?i=nodejs,electron)](https://skillicons.dev) 
   # Banco de Dados:   [![My Skills](https://skillicons.dev/icons?i=sqlite)](https://skillicons.dev) 
 
   
-- **Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
+**Metadados:** Biblioteca `music-metadata` para extrair informações de tags ID3
 
-
+---
 
 
 # Funcionalidades Atuais
@@ -57,6 +57,8 @@
 - Banco de dados SQLite criado automaticamente em `~/.config/meu-app/sompur.db`
 - Todas as músicas, capas e metadados são persistidos localmente
 
+---
+
 ## Como Usar
 
 ### Instalação e Execução
@@ -79,6 +81,8 @@ npm start
 npm run dist
 ```
 
+---
+
 ### Adicionando Músicas
 
 
@@ -92,12 +96,14 @@ npm run dist
 5. Edite se necessário e salve
 
 
-
+---
 
 ## Considerações de Produção
 
 - Banco de dados é criado no diretório de dados do usuário (`app.getPath("userData")`)
 - Compatível com Windows, macOS e Linux
+
+---
 
 ## Próximos Passos Potenciais
 
@@ -105,6 +111,8 @@ npm run dist
 - créditos no drawer
 - ajustar css do habilitar e desabilitar, quando ativada a função ele quebra o css
 - fazer icones do drawer no aseprite
+
+---
 
 ## Autor
 
